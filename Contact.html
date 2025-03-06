@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<style>
+    
+    .branch {
+    position: relative;
+    background-image: url('./Images/slide4.jfif');
+    background-size: cover;
+    background-position: center;
+}
+.card_bg{
+    background-color:rgb(188 199 217 / 52%);
+}
+
+
+.branch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+
+.branch > * {
+    position: relative;
+    z-index: 1;
+}
+.hea_span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p,.nav_list li{
+ font-family: cursive;
+}
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+</style>
+
+<body>
+    <nav class="bg-gray-300 shadow-md dark:bg-gray-900">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+
+                <!-- Logo & Text (Stacked) -->
+                <a href="#" class="flex flex-col items-center space-y-1">
+                    <img src="Images/logo.jpg" class="h-12 w-auto" alt="Logo" />
+                    <span class=" hea_span text-lg font-semibold text-gray-800 dark:text-white">Animal Hospital</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-600 dark:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+                <div id="menu" class="hidden md:flex md:items-center">
+                    <ul class="flex flex-col md:flex-row md:space-x-6 nav_list">
+                        <li>
+                            <a href="Index.html"
+                                class="block px-3 py-2 text-gray-700 font-medium dark:text-red-500 hover:text-gray-400">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="Contact.html"
+                                class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-100 dark:bg-gray-800">
+                <ul class="flex flex-col space-y-2 p-4 nav_list">
+                    <li>
+                        <a href="Index.html"
+                            class="block px-3 py-2 text-gray-700 font-medium dark:text-red-500">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="Contact.html"
+                            class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative py-10 px-4 bg-cover bg-center branch">
+        <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+    
+        <div class="relative max-w-5xl mx-auto text-center text-white">
+            <h2 class="text-4xl font-bold text-gray-700">Our Branches</h2>
+        </div>
+    
+        <div class="relative mt-8 grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+            <!-- Karunagapally Branch -->
+            <div class="bg-slate-400 shadow-lg rounded-lg p-6 text-center card_bg">
+                <h3 class="text-2xl font-semibold text-gray-800">Karunagapally</h3>
+                <p class="text-gray-600 mt-2">123, Main Street, Karunagapally</p>
+                <p class="text-gray-600">Phone: +91 9876543210</p>
+                <button class="mt-4 px-4 py-2 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition">
+                    Contact Us
+                </button>
+            </div>
+    
+            <!-- Kochi Branch -->
+            <div class=" shadow-lg rounded-lg p-6 text-center card_bg">
+                <h3 class="text-2xl font-semibold text-gray-800">Kochi</h3>
+                <p class="text-gray-600 mt-2">456, Marine Drive, Kochi</p>
+                <p class="text-gray-600">Phone: +91 9876543211</p>
+                <button class="mt-4 px-4 py-2 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition">
+                    Contact Us
+                </button>
+            </div>
+    
+            <!-- Kollam Branch -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center card_bg">
+                <h3 class="text-2xl font-semibold text-gray-800">Kollam</h3>
+                <p class="text-gray-600 mt-2">789, Beach Road, Kollam</p>
+                <p class="text-gray-600">Phone: +91 9876543212</p>
+                <button class="mt-4 px-4 py-2 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="py-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold text-gray-600">Contact Form</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Left Side - Contact Form -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <form>
+                        <!-- Name Input -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="text" name="name" id="name"
+                                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-gray-400"
+                                placeholder=" " required />
+                            <label for="name"
+                                class="absolute top-3 left-0 z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 dark:peer-focus:text-gray-300">
+                                Name
+                            </label>
+                        </div>
+                
+                        <!-- Email Input -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="email" name="email" id="email"
+                                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-gray-400"
+                                placeholder=" " required />
+                            <label for="email"
+                                class="absolute top-3 left-0 z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 dark:peer-focus:text-gray-300">
+                                Email
+                            </label>
+                        </div>
+                
+                        <!-- Message Textarea -->
+                        <div class="relative z-0 w-full mb-5 group">
+                            <textarea name="message" id="message" rows="4"
+                                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-gray-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-gray-400"
+                                placeholder=" " required></textarea>
+                            <label for="message"
+                                class="absolute top-3 left-0 z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 dark:text-gray-400 dark:peer-focus:text-gray-300">
+                                Message
+                            </label>
+                        </div>
+                
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="w-full bg-gray-400 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Right Side - Image -->
+                <div>
+                    <img src="Images/treat copy.png" alt="Contact Image" >
+                </div>
+
+
+              
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- footer -->
+    <section class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-6">
+
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-blue-500 transition">
+
+                    <i class="fa-brands fa-facebook-f text-2xl text-blue-500"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i class="fa-brands fa-x-twitter text-blue-500  text-2xl"></i>
+                </a>
+                <a href="#" class="hover:text-pink-500 transition">
+
+                    <i
+                        class="fa-brands fa-instagram text-2xl  text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text "></i>
+                </a>
+                <a href="#" class="hover:text-red-500 transition">
+                    <i class="fa-brands fa-youtube text-2xl text-red-600"></i>
+
+                </a>
+            </div>
+
+            <!-- Info Sections -->
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+
+                <!-- About Us -->
+                <div>
+                    <h6 class="text-lg font-semibold text-white mb-3">ABOUT US</h6>
+                    <p class="text-sm text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                    </p>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-3">Newsletter</h5>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Enter your email" class="p-2 rounded bg-gray-800 text-white">
+                        <button class="bg-blue-600 hover:bg-blue-500 text-white py-2 rounded">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Need Help -->
+                <div>
+                    <h6 class="text-lg font-semibold text-white mb-3">NEED HELP</h6>
+                    <p class="text-sm text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                    </p>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h6 class="text-lg font-semibold text-white mb-3">CONTACT US</h6>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fa fa-map-marker"></i> Gb road 123, USA</p>
+                        <p><i class="fa fa-phone"></i> +01 12345678901</p>
+                        <p><i class="fa fa-envelope"></i> vyduryainfo@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 border-t border-gray-700 py-4 text-center">
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="https://vyduryadigital.com/" class="text-blue-400 hover:text-blue-300">Vydurya Digitals</a>
+            </p>
+        </footer>
+
+    </section>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890"
+        class="fixed bottom-5 right-5 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-lg hover:scale-110 hover:bg-green-600 transition-all duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+</body>
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
+
+</html>

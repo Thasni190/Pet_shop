@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Index.css">
+</head>
+<style>
+.hea_span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p,.nav_list li{
+ font-family: cursive;
+}
+body{
+    padding-top: 45px;
+}
+
+</style>
+
+<body>
+    <nav class="bg-gray-300 shadow-md dark:bg-gray-900 fixed top-0 left-0 w-full z-50">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+
+                <!-- Logo & Text (Stacked) -->
+                <a href="#" class="flex flex-col items-center space-y-1">
+                    <img src="./Images/logo.jpg" class="h-12 w-auto" alt="Logo" />
+                    <span class="hea_span text-lg font-semibold text-gray-800 dark:text-white">Animal Hospital</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-600 dark:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+              
+                <div id="menu" class="hidden md:flex md:items-center">
+                    <ul class="flex flex-col md:flex-row md:space-x-6 nav_list">
+                        <li>
+                            <a href="Index.html"
+                                class="block px-3 py-2 text-gray-700 font-medium dark:text-red-500 hover:text-gray-400">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400" onclick="showAboutUs()">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400" onclick="showService()">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="Contact.html"
+                                class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-100 dark:bg-gray-800">
+                <ul class="flex flex-col space-y-2 p-4 nav_list">
+                    <li>
+                        <a href="Index.html"
+                            class="block px-3 py-2 text-gray-700 font-medium dark:text-red-500">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white" onclick="showAboutUs()">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white" onclick="showService()">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="Contact.html"
+                            class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Carousel Container -->
+    <div id="default-carousel" class="relative w-full overflow-hidden" data-carousel="slide">
+        <!-- Carousel Wrapper -->
+        <div class="relative h-56 md:h-96">
+            <!-- Item 1 -->
+            <div class="carousel-item active relative">
+                <img src="./Images/slide2.jpg" class="w-full h-full object-cover" alt="Slide 1">
+
+
+            </div>
+            <!-- Item 2 -->
+            <div class="carousel-item hidden relative">
+                <img src="./Images/slide1.jpg " class="w-full h-full object-cover" alt="Slide 2">
+
+            </div>
+
+            <!-- Item 3 -->
+            <div class="carousel-item hidden relative">
+                <img src="Images/890.jpg" class="w-full h-full object-cotain" alt="Slide 3">
+
+            </div>
+        </div>
+
+
+
+        <!-- Slider Controls -->
+        <button id="prevBtn"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❮</button>
+        <button id="nextBtn"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❯</button>
+    </div>
+
+    <!-- About Us -->
+    <section class="bg-gray-100 py-12 px-4"  id="aboutSection">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-600">About us</h2>
+            <p class="mt-4 text-gray-600 text-lg md:text-xl">
+                At <span class="text-blue-600 font-semibold"> Veterinary Hospital</span>, we are dedicated to providing
+                compassionate, high-quality healthcare for your beloved pets. Our team of experienced veterinarians and
+                caring staff is available <span class="text-green-600 font-semibold">24/7</span> to ensure your pet
+                receives the best possible care.
+            </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap justify-center items-center gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="w-16 mx-auto mb-4"
+                    alt="Emergency Care">
+                <h3 class="text-xl font-semibold text-gray-700">24/7 Emergency Care</h3>
+                <p class="text-gray-600 mt-2">We are always here for your pets in times of need.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" class="w-16 mx-auto mb-4"
+                    alt="Experienced Vets">
+                <h3 class="text-xl font-semibold text-gray-700">Experienced Veterinarians</h3>
+                <p class="text-gray-600 mt-2">Our team is highly trained and passionate about pet health.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2885/2885476.png" class="w-16 mx-auto mb-4"
+                    alt="Advanced Facilities">
+                <h3 class="text-xl font-semibold text-gray-700">Advanced Facilities</h3>
+                <p class="text-gray-600 mt-2">State-of-the-art equipment for accurate diagnosis and treatment.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="bg-gradient-to-r from-blue-50 to-gray-100 py-16 px-6" id="serviceSection">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-600">Our Services</h2>
+            <p class="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+                We provide top-notch veterinary care with state-of-the-art facilities. Our dedicated team ensures the
+                best treatment for your beloved pets.
+            </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service Cards -->
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/surg.jfif"
+                        class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Surgical Care</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/ultra.jpg"
+                        class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Ultrasound</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/dog-grooming-1.webp"
+                        class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Grooming</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/radioolgy.webp"
+                        class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Radiology</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extra Services -->
+        <div id="extra-services" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 hidden">
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/phar.jpg" class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Pharmacy</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/AAmbulance service.avif"
+                        class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Ambulance service </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/lab.jfif" class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Lab</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="Images/vacc.webp"
+                        class="w-full h-52 object-cover rounded-t-lg group-hover:opacity-75 transition">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <h3 class="text-2xl font-semibold text-white">Vaccination</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View More / View Less Button -->
+        <div class="text-center mt-12">
+            <button id="view-more-btn"
+                class="bg-gray-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-gray-500 transition-all duration-300">
+                View More
+            </button>
+            <!-- class="w-full bg-gray-400 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition duration-300" -->
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-16 px-6">
+        <div class="max-w-5xl mx-auto text-center ">
+            <h2 class="text-4xl font-bold text-gray-600">Meet Our Veterinary Team</h2>
+            <p class="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+                Our dedicated professionals are here to provide the best care for your pets.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <!-- Veterinarian 1 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden text-center p-6">
+                <img src="Images/Dr1.avif" alt="Dr. Emily Carter" class="w-32 h-32 mx-auto rounded-full object-cover">
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Dr. Emily Carter</h3>
+                <p class="text-gray-500 text-sm uppercase">Chief Veterinarian</p>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Dr. Emily has over 15 years of experience in small animal medicine and surgery.
+                </p>
+                <div class="flex justify-center mt-4 space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-gray-900"><i
+                        class="fa-brands fa-instagram text-xl  text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text "></i></a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900"> <i class="fa-brands fa-x-twitter text-blue-500  text-xl"></i></a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900"><i class="fab fa-linkedin-in text-blue-500 text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Veterinarian 2 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden text-center p-6">
+                <img src="Images/Dr2.jpg" alt="Dr. Mark Johnson" class="w-32 h-32 mx-auto rounded-full object-cover">
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Dr. Mark Johnson</h3>
+                <p class="text-gray-500 text-sm uppercase">Senior Veterinary Surgeon</p>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Specializing in orthopedic surgery and emergency care for pets.
+                </p>
+                <div class="flex justify-center mt-4 space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-gray-900"><i
+                        class="fa-brands fa-instagram text-xl  text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text "></i></a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900"> <i class="fa-brands fa-x-twitter text-blue-500  text-xl"></i></a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900"><i class="fab fa-linkedin-in text-blue-500 text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Veterinary Nurse -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden text-center p-6">
+                <img src="Images/DR3.jpg" alt="Sarah Williams" class="w-32 h-32 mx-auto rounded-full object-cover">
+                <h3 class="mt-4 text-xl font-semibold text-gray-800">Sarah Williams</h3>
+                <p class="text-gray-500 text-sm uppercase">Veterinary Nurse</p>
+                <p class="text-gray-600 mt-2 text-sm">
+                    Sarah ensures pets receive the best post-treatment care and comfort.
+                </p>
+                <div class="flex justify-center mt-4 space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-gray-900"><i
+                        class="fa-brands fa-instagram text-xl  text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text "></i></a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900"> <i class="fa-brands fa-x-twitter text-blue-500  text-xl"></i></a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900"><i class="fab fa-linkedin-in text-blue-500 text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+
+    <section class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-6">
+
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-blue-500 transition">
+
+                    <i class="fa-brands fa-facebook-f text-2xl text-blue-500"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i class="fa-brands fa-x-twitter text-blue-500  text-2xl"></i>
+                </a>
+                <a href="#" class="hover:text-pink-500 transition">
+
+                    <i
+                        class="fa-brands fa-instagram text-2xl  text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text "></i>
+                </a>
+                <a href="#" class="hover:text-red-500 transition">
+                    <i class="fa-brands fa-youtube text-2xl text-red-600"></i>
+
+                </a>
+            </div>
+
+            <!-- Info Sections -->
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+
+                <!-- About Us -->
+                <div>
+                    <h6 class="text-lg font-semibold text-white mb-3">ABOUT US</h6>
+                    <p class="text-sm text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                    </p>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-3">Newsletter</h5>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Enter your email" class="p-2 rounded bg-gray-800 text-white">
+                        <button class="bg-blue-600 hover:bg-blue-500 text-white py-2 rounded">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Need Help -->
+                <div>
+                    <h6 class="text-lg font-semibold text-white mb-3">NEED HELP</h6>
+                    <p class="text-sm text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                    </p>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h6 class="text-lg font-semibold text-white mb-3">CONTACT US</h6>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fa fa-map-marker"></i> Gb road 123, USA</p>
+                        <p><i class="fa fa-phone"></i> +01 12345678901</p>
+                        <p><i class="fa fa-envelope"></i> vyduryainfo@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 border-t border-gray-700 py-4 text-center">
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="https://vyduryadigital.com/" class="text-blue-400 hover:text-blue-300">Vydurya Digitals</a>
+            </p>
+        </footer>
+
+    </section>
+
+
+
+
+
+
+</body>
+<script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+
+<script src="Index.js"></script>
+
+</html>

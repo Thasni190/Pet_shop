@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <nav class="bg-white shadow-md dark:bg-gray-900">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+
+                <!-- Logo & Text (Stacked) -->
+                <a href="#" class="flex flex-col items-center space-y-1">
+                    <img src="logo.jpg" class="h-12 w-auto" alt="Logo" />
+                    <span class="text-lg font-semibold text-gray-800 dark:text-white">Animal Hospital</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-gray-600 dark:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+                <div id="menu" class="hidden md:flex md:items-center">
+                    <ul class="flex flex-col md:flex-row md:space-x-6">
+                        <li>
+                            <a href="Index.html"
+                                class="block px-3 py-2 text-gray-700 font-medium dark:text-red-500 hover:text-red-600">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Login</a>
+                        </li>
+                        <li>
+                            <a href="Contact.html"
+                                class="block px-3 py-2 text-gray-700 font-medium dark:text-white hover:text-gray-400">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-100 dark:bg-gray-800">
+                <ul class="flex flex-col space-y-2 p-4">
+                    <li>
+                        <a href="Index.html"
+                            class="block px-3 py-2 text-gray-700 font-medium dark:text-red-500">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Login</a>
+                    </li>
+                    <li>
+                        <a href="Contact.html"
+                            class="block px-3 py-2 text-gray-700 font-medium dark:text-white">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
